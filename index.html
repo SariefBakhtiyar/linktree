@@ -15,6 +15,7 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
+      overflow-x: hidden;
     }
 
     .container {
@@ -25,6 +26,18 @@
       width: 100%;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       text-align: center;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .profile-pic {
@@ -74,7 +87,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
 
     a.button {
@@ -92,6 +105,40 @@
     a.button:hover {
       background: #6a11cb;
       box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+    }
+
+    /* Kontak Estetik */
+    .contact-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(8px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .contact-box p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-box a {
+      color: #ffffff;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .contact-box a:hover {
+      color: #a7d6ff;
     }
 
     .logo {
@@ -155,6 +202,14 @@
       <a class="button" href="https://sariefbakhtiyar.github.io/presensi-web/index.html" target="_blank">Presensi Web</a>
       <a class="button" href="https://sariefbakhtiyar.github.io/asatgn-2025" target="_blank">Asatgn 2025</a>
       <a class="button" href="https://sariefbakhtiyar.github.io/spmi-smkma5" target="_blank">SPMI</a>
+    </div>
+
+    <!-- Kotak Kontak -->
+    <div class="contact-box">
+      <h3>📞 Kontak Saya</h3>
+      <p>📱 <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a></p>
+      <p>📧 <a href="mailto:sarief@email.com">sarief@email.com</a></p>
+      <p>🎵 <a href="https://www.tiktok.com/@sariefbakhtiyar" target="_blank">@sariefbakhtiyar</a></p>
     </div>
 
     <!-- Logo Sekolah -->
