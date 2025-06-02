@@ -26,7 +26,6 @@
       width: 100%;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       text-align: center;
-      animation: fadeInUp 1s ease forwards;
     }
 
     @keyframes fadeInUp {
@@ -40,6 +39,19 @@
       }
     }
 
+    @keyframes textFocusIn {
+      0% {
+        filter: blur(12px);
+        opacity: 0;
+        transform: scale(1.3);
+      }
+      100% {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
     .profile-pic {
       width: 140px;
       height: 140px;
@@ -49,6 +61,7 @@
       border: 4px solid #fff;
       margin-bottom: 20px;
       box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      animation: fadeInUp 1s ease forwards;
     }
 
     h1 {
@@ -56,6 +69,7 @@
       font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: 1.1px;
+      animation: textFocusIn 1.2s ease-out forwards;
     }
 
     .title-small {
@@ -72,7 +86,12 @@
       font-size: 0.85rem;
       opacity: 0.85;
       line-height: 1.2;
+      animation: fadeInUp 0.8s ease forwards;
     }
+
+    .title-small p:nth-child(1) { animation-delay: 1.4s; }
+    .title-small p:nth-child(2) { animation-delay: 1.6s; }
+    .title-small p:nth-child(3) { animation-delay: 1.8s; }
 
     .icon-circle {
       width: 14px;
@@ -90,7 +109,7 @@
       margin-bottom: 25px;
     }
 
-    a.button {
+    .links a {
       background: #2575fc;
       color: white;
       text-decoration: none;
@@ -100,14 +119,21 @@
       font-size: 1.1rem;
       box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
       transition: background 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease forwards;
     }
 
-    a.button:hover {
+    .links a:nth-child(1) { animation-delay: 2s; }
+    .links a:nth-child(2) { animation-delay: 2.2s; }
+    .links a:nth-child(3) { animation-delay: 2.4s; }
+    .links a:nth-child(4) { animation-delay: 2.6s; }
+
+    .links a:hover {
       background: #6a11cb;
       box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
     }
 
-    /* Kontak Estetik */
     .contact-box {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -115,7 +141,10 @@
       padding: 15px;
       margin-bottom: 30px;
       backdrop-filter: blur(8px);
-      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 2.8s;
     }
 
     .contact-box h3 {
@@ -148,12 +177,19 @@
       margin-top: 10px;
       margin-bottom: 10px;
       filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 3s;
     }
 
     footer {
       margin-top: 10px;
       font-size: 0.85rem;
-      opacity: 0.6;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 3.2s;
     }
 
     @media (max-width: 480px) {
@@ -204,19 +240,15 @@
       <a class="button" href="https://sariefbakhtiyar.github.io/spmi-smkma5" target="_blank">SPMI</a>
       <a class="button" href="https://sariefbakhtiyar.github.io/tkr" target="_blank">Jurusan TKR</a>
     </div>
-    
 
-    <!-- Kotak Kontak -->
     <div class="contact-box">
       <h3>📞 Kontak Saya</h3>
       <p>📱 <a href="https://wa.me/6287737776767" target="_blank">WhatsApp</a></p>
-      <p>📧 <a href="mailto: sariefbakhtiyar37@guru.smk.belajar.id">sarief@email.com</a></p>
+      <p>📧 <a href="mailto:sariefbakhtiyar37@guru.smk.belajar.id">sarief@email.com</a></p>
       <p>🎵 <a href="https://www.tiktok.com/@sariefbakhtiyar" target="_blank">@sariefbakhtiyar</a></p>
     </div>
 
-    <!-- Logo Sekolah -->
     <img src="logo.png" alt="Logo Sekolah" class="logo" />
-
     <footer>© 2025 Sarief Bakhtiyar</footer>
   </div>
 </body>
